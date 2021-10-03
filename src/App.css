@@ -1,4 +1,27 @@
+body{
+  background: url(./assets/bacground.jpg);
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+}
+.card{
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-width: 350px;
+  text-align: center;
+  margin-top: 60px;
+  background: cornsilk;
+  padding: 5px;
+  float: left;
+}
 .heroImg{
   height: 100px;
   width: 100px;
+  overflow: hidden;
+  border-radius: 100%;
 }
+.maisInfo{
+  border-radius: 20px;
+  background:cadetblue;
+}
+
