@@ -33,14 +33,14 @@ export default function ShowAll(){
       
     
     return (
-      <div className="card">
+      <div key='super_people'>
         {listHeroes.map(h => {
           return(
-            <div key={h?.id}>
+            <div className="card" key={h?.id}>
               <p>Nome: {h?.name}</p>
               <img className="heroImg" src={h?.image.url}></img>
-              <p >Publicado:{h?.biography.publisher} </p>
-              <button  className="maisInfo">Mais Informação</button>
+              <p >Publicado: {h?.biography.publisher} </p>
+              <button  className="maisInfo">Mais Informações</button>
             </div>
         );
           
