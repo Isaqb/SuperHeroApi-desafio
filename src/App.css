@@ -7,12 +7,13 @@ body{
 .card{
   border: 1px solid #ddd;
   border-radius: 6px;
-  max-width: 350px;
+  width: 200px;
+  height: 250px;
   text-align: center;
-  margin-top: 60px;
   background: cornsilk;
   padding: 5px;
   float: left;
+  margin: 10px;
 }
 .heroImg{
   height: 100px;
