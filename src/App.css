@@ -4,6 +4,7 @@ body{
   display: flex;
   flex-direction: row;
 }
+
 .card{
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -15,14 +16,19 @@ body{
   float: left;
   margin: 10px;
 }
+
 .heroImg{
   height: 100px;
   width: 100px;
   overflow: hidden;
   border-radius: 100%;
 }
+
 .maisInfo{
   border-radius: 20px;
   background:cadetblue;
 }
 
+.show{
+  display: block !important;
+}

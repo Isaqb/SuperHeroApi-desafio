@@ -1,13 +1,20 @@
-export default function MoreInfo(){
-    return(
-        <div>
+import React from "react";
+import "./MoreInfo.css";
 
+const MoreInfo = props => {
+    const { className, modalRef, h} = props;
+
+    return(
+        <div ref={modalRef} id={h} className={`${className} modal`}>
+            <p>Meu modal!</p>
+            <p>
+                {h}
+            </p>
         </div>
-        );
-        
-    
+    )
 }
 
+export default MoreInfo;
 /*
 "name":"A-Bomb",
 "powerstats":{"intelligence":"38","strength":"100","speed":"17","durability":"80","power":"24","combat":"64"},
