@@ -16,3 +16,6 @@
     overflow: hidden;
     border-radius: 100%;
   }
+  .box{
+      border: 5px solid black;
+  }

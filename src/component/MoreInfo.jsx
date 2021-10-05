@@ -34,53 +34,55 @@ type Hero = {
 }
 */
 const MoreInfo = props => {
-    const { className, modalRef, h,ht} = props;
+    const {closeDropdown, className, modalRef, h,ht} = props;
+
+    
     
     return(
         <div ref={modalRef} id={h} hero={ht} className={`${className} modal`}>
-            <p>{h}</p>
-            <p><b>Name:</b> {ht.name}</p>
+            <button onClick={closeDropdown(ht.id)}>X</button>
+            <h1><b>Name: </b> {ht.name}</h1>
             <img className="heroImg" src={ht.image.url} alt={ht.name}/>
-            <p><b>Appearance</b></p>
-            <div>
-            <p><b>eye-color</b>{ht.appearance.eyecolor}</p>
-            <p><b>gender</b>{ht.appearance.gender}</p>
-            <p><b>hair-color</b>{ht.appearance.haircolor}</p>
-            <p><b>height</b>{ht.appearance.height[1]}</p>
-            <p><b>weight</b>{ht.appearance.weight[1]}</p>
-            <p><b>race</b>{ht.appearance.race}</p>
+            <h2><b>Appearance</b></h2>
+            <div className="box">
+            <p><b>Eye color: </b>{ht.appearance['eye-color']}</p>
+            <p><b>Gender: </b>{ht.appearance.gender}</p>
+            <p><b>Hair color: </b>{ht.appearance['hair-color']}</p>
+            <p><b>Height: </b>{ht.appearance.height[1]}</p>
+            <p><b>Weight: </b>{ht.appearance.weight[1]}</p>
+            <p><b>Race: </b>{ht.appearance.race}</p>
             </div>
-            <p><b>Powerstats</b></p>
+            <h2><b>Powerstats</b></h2>
             <br/>
-            <div>
-                <p><b>intelligence</b>{ht.powerstats.intelligence}</p>
-                <p><b>strength</b>{ht.powerstats.strength}</p>
-                <p><b>speed</b>{ht.powerstats.speed}</p>
-                <p><b>durability</b>{ht.powerstats.durability}</p>
-                <p><b>power</b>{ht.powerstats.power}</p>
-                <p><b>combat</b>{ht.powerstats.combat}</p>
+            <div className="box">
+                <p><b>Intelligence: </b>{ht.powerstats.intelligence}</p>
+                <p><b>Strength: </b>{ht.powerstats.strength}</p>
+                <p><b>Speed: </b>{ht.powerstats.speed}</p>
+                <p><b>Durability: </b>{ht.powerstats.durability}</p>
+                <p><b>Power: </b>{ht.powerstats.power}</p>
+                <p><b>Combat: </b>{ht.powerstats.combat}</p>
             </div>
-            <p><b>Biography</b></p>
-            <div>
-            <p><b>full-name</b>{ht.biography.fullname}</p>
-            <p><b>alter-egos</b>{ht.biography.alteregos}</p>
-            <p><b>aliases</b>{ht.biography.aliases}</p>
-            <p><b>place-of-birth</b>{ht.biography.placeofbirth}</p>
-            <p><b>first-appearance</b>{ht.biography.firstappearance}</p>
-            <p><b>publisher</b>{ht.biography.publisher}</p>
-            <p><b>alignment</b>{ht.biography.alignment}</p>
-            </div>
-            <br/>
-            <p><b>Work</b></p>
-            <div>
-            <p><b>occupation</b>{ht.work.occupation}</p>
-            <p><b>base</b>{ht.work.base}</p>
+            <h2><b>Biography</b></h2>
+            <div className="box">
+            <p><b>Full name: </b>{ht.biography['full-name']}</p>
+            <p><b>Alter egos: </b>{ht.biography['alter-egos']}</p>
+            <p><b>Aliases: </b>{ht.biography.aliases}</p>
+            <p><b>Place of birth: </b>{ht.biography["place-of-birth"]}</p>
+            <p><b>First appearance: </b>{ht.biography['first-appearance']}</p>
+            <p><b>Publisher: </b>{ht.biography.publisher}</p>
+            <p><b>Alignment: </b>{ht.biography.alignment}</p>
             </div>
             <br/>
-            <p><b>Connection</b></p>
-            <div>
-            <p><b>group-affiliation</b>{ht.connections.groupaffiliation}</p>
-            <p><b>relatives</b>{ht.connections.relatives}</p>
+            <h2><b>Work</b></h2>
+            <div className="box">
+            <p><b>Occupation: </b>{ht.work.occupation}</p>
+            <p><b>Base:</b>{ht.work.base}</p>
+            </div>
+            <br/>
+            <h2><b>Connection</b></h2>
+            <div className="box">
+            <p><b>Group affiliation:</b>{ht.connections['group-affiliation']}</p>
+            <p><b>Relatives:</b>{ht.connections.relatives}</p>
             </div>
             <br/>
         </div>

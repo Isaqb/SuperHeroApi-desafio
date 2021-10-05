@@ -43,14 +43,10 @@ export default function ShowAll(){
       document.body.addEventListener("click", closeDropdown, true);
     }
     
-    const closeDropdown = event => {
-      event.stopPropagation(); //impede de executar listeners dos filhos
-      const contain = modalRef.current.contains(event.target);
-      if (!contain) { //se clicar fora do modal, ele DESaparece
-        console.log("hidden");
-        //document.getElementById(id).classList.remove('show');
-        document.body.removeEventListener("click", closeDropdown, true);
-      }
+    const closeDropdown = (id) => {
+      //console.log("closeDropdown")
+      //console.log(id)
+      //document.getElementById(id).classList.remove('show');
     };
     
     return (
@@ -62,7 +58,7 @@ export default function ShowAll(){
               <img className="heroImg" alt={h?.name} src={h?.image.url}></img>
               <p><b>Publicado:</b> {h?.biography.publisher} </p>
               <button  className="maisInfo" onClick={()=>toggleDropdown(h?.id)}>Mais Informações</button>
-              <MoreInfo className={dropdown} ht={h}  h={h.id} modalRef={modalRef}/>
+              <MoreInfo className={dropdown} closeDropdown={closeDropdown} ht={h}  h={h.id} modalRef={modalRef}/>
             </div>
         );
           
