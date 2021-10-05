@@ -52,7 +52,7 @@ export default function ShowAll(){
         document.body.removeEventListener("click", closeDropdown, true);
       }
     };
-
+    
     return (
       <div key='super_people'>
         {listHeroes.map(h => {
@@ -62,7 +62,7 @@ export default function ShowAll(){
               <img className="heroImg" alt={h?.name} src={h?.image.url}></img>
               <p><b>Publicado:</b> {h?.biography.publisher} </p>
               <button  className="maisInfo" onClick={()=>toggleDropdown(h?.id)}>Mais Informações</button>
-              <MoreInfo className={dropdown}  h={h.id} modalRef={modalRef}/>
+              <MoreInfo className={dropdown} ht={h}  h={h.id} modalRef={modalRef}/>
             </div>
         );
           
