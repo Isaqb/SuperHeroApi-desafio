@@ -32,3 +32,8 @@ body{
 .show{
   display: block !important;
 }
+
+.grupos{
+  border: 4px solid cornsilk;
+  background-color: cornsilk;
+}

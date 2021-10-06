@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef} from "react";
 import api from "./service/api";
 import  "./App.css";
 import MoreInfo from "./component/MoreInfo";
+import AddGroup from "./component/AddGrupo";
 
 export default function ShowAll(){
     
@@ -20,7 +21,7 @@ export default function ShowAll(){
     
     const listHeroes = [];
 
-    for(let i= 1 ; i<=5;i++){
+    for(let i= 1 ; i<=20;i++){
       let r = CallApi(i.toString())
       if(r !== undefined){
         if(r.image !== undefined){
@@ -41,8 +42,17 @@ export default function ShowAll(){
     const closeDropdown = (id) => {
       document.getElementById(id).classList.remove('show');
     };
+
+    const openNewTab = () =>{
+      window.open('/groups',{AddGroup});
+    }
     
     return (
+      <>
+      <div>
+        <button onClick={openNewTab} className="grupos">Criar Grupos</button>
+        
+      </div>
       <div key='super_people'>
         {listHeroes.map(h => {
           return(
@@ -58,5 +68,6 @@ export default function ShowAll(){
         })}
         
       </div>
+      </>
     );
 }
