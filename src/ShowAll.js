@@ -32,21 +32,14 @@ export default function ShowAll(){
         }
       }
 
-    const [dropdown, setDropdown] = useState("");
     const modalRef = useRef(null);
 
     const toggleDropdown = (id) => {
-      console.log("show");
-      //se clicar no botão, modal aparece
-      //setDropdown("show");
       document.getElementById(id).classList.add('show');
-      document.body.addEventListener("click", closeDropdown, true);
     }
     
     const closeDropdown = (id) => {
-      //console.log("closeDropdown")
-      //console.log(id)
-      //document.getElementById(id).classList.remove('show');
+      document.getElementById(id).classList.remove('show');
     };
     
     return (
@@ -58,7 +51,7 @@ export default function ShowAll(){
               <img className="heroImg" alt={h?.name} src={h?.image.url}></img>
               <p><b>Publicado:</b> {h?.biography.publisher} </p>
               <button  className="maisInfo" onClick={()=>toggleDropdown(h?.id)}>Mais Informações</button>
-              <MoreInfo className={dropdown} closeDropdown={closeDropdown} ht={h}  h={h.id} modalRef={modalRef}/>
+              <MoreInfo closeDropdown={closeDropdown} heros={h} modalRef={modalRef}/>
             </div>
         );
           
