@@ -1,5 +1,5 @@
 body{
-  background: url(./assets/bacground.jpg);
+  background: url(./assets/bacground.jpg); 
   padding: 25px;
   display: flex;
   flex-direction: row;
