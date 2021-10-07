@@ -1,3 +1,22 @@
 .titulo{
     background-color: cornsilk;
 }
+.cardbox{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background: cornsilk;
+    padding: 5px;
+    float: left;
+    margin: 10px;
+}
+
+.heroImg{
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+  
