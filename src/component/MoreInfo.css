@@ -1,15 +1,14 @@
 .modal {
     background-color: cornsilk;
     display: none;
-    position: absolute;
+    position: fixed;
     overflow-y: auto;
     width: 500px;
     border: 1px solid #ddd;
     border-radius: 6px;
     top: 10vh;
     bottom: 10vh;
-    align-self: center;
-    
+    left: 10vh;
 }
 
 .heroImg {
@@ -21,7 +20,7 @@
 
 .box-ap {
     display: flex;
-    padding: 5px; 
+    padding: 5px;
     width: 450px;
     flex-wrap: wrap;
 }
@@ -32,4 +31,3 @@
     border: 3px solid black;
     padding: 5px;
 }
-

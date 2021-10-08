@@ -1,7 +1,37 @@
-.titulo{
+.titulo {
+    border-radius: 20px;
     background-color: cornsilk;
+    text-align: center;
 }
-.cardbox{
+
+.grupos {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    white-space: normal;
+    float: left;
+}
+
+.input{
+    border-radius: 20px;
+    width: 500px;
+    height: 30px;
+}
+
+.card-group{
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 100px;
+    height: 200px;
+    text-align: center;
+    background: cornsilk;
+    padding: 5px;
+    float: left;
+    margin: 10px; 
+    margin-bottom: 5px;
+}
+
+.cardbox {
     border: 1px solid #ddd;
     border-radius: 6px;
     width: 200px;
@@ -13,10 +43,9 @@
     margin: 10px;
 }
 
-.heroImg{
-    height: 100px;
-    width: 100px;
+.heroImg {
+    height: 90px;
+    width: 90px;
     overflow: hidden;
     border-radius: 100%;
-  }
-  
+}

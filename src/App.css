@@ -1,8 +1,6 @@
 body{
   background: url(./assets/bacground.jpg); 
   padding: 25px;
-  display: flex;
-  flex-direction: row;
 }
 
 .card{
@@ -12,7 +10,7 @@ body{
   height: 250px;
   text-align: center;
   background: cornsilk;
-  padding: 5px;
+  padding: 15px;
   float: left;
   margin: 10px;
 }
@@ -33,7 +31,8 @@ body{
   display: block !important;
 }
 
-.grupos{
+.group{
+  border-radius: 20px;
   border: 4px solid cornsilk;
   background-color: cornsilk;
 }
