@@ -21,7 +21,7 @@ export default function ShowAll() {
 
   const listHeroes = [];
 
-  for (let i = 1; i <= 50; i++) {
+  for (let i = 1; i <= 731; i++) {
     let r = CallApi(i.toString())
     if (r !== undefined) {
       if (r.image !== undefined) {
